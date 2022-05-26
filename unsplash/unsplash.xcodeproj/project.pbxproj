@@ -15,7 +15,18 @@
 		22A1209A283FA8F4002EA23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A12098283FA8F4002EA23F /* LaunchScreen.storyboard */; };
 		22A120A3283FCC28002EA23F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120A2283FCC28002EA23F /* ImageCollectionViewCell.swift */; };
 		22A120A7283FE0AF002EA23F /* api_response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A120A6283FE0AF002EA23F /* api_response.swift */; };
+		22C1D2AB284025C600178E1B /* unsplashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C1D2AA284025C600178E1B /* unsplashUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22C1D2AD284025C600178E1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A12082283FA8F3002EA23F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22A12089283FA8F3002EA23F;
+			remoteInfo = unsplash;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22A1208A283FA8F3002EA23F /* unsplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unsplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +39,20 @@
 		22A1209B283FA8F4002EA23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A120A2283FCC28002EA23F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		22A120A6283FE0AF002EA23F /* api_response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_response.swift; sourceTree = "<group>"; };
+		22C1D2A8284025C600178E1B /* unsplashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unsplashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C1D2AA284025C600178E1B /* unsplashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsplashUITests.swift; sourceTree = "<group>"; };
+		22C1D2AC284025C600178E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		22A12087283FA8F3002EA23F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C1D2A5284025C600178E1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				22A1208C283FA8F3002EA23F /* unsplash */,
+				22C1D2A9284025C600178E1B /* unsplashUITests */,
 				22A1208B283FA8F3002EA23F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				22A1208A283FA8F3002EA23F /* unsplash.app */,
+				22C1D2A8284025C600178E1B /* unsplashUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,14 +83,12 @@
 		22A1208C283FA8F3002EA23F /* unsplash */ = {
 			isa = PBXGroup;
 			children = (
+				22C1D2982840128500178E1B /* delegates */,
+				22C1D2912840116600178E1B /* storyboads */,
 				22A120AB283FE1DE002EA23F /* controllers */,
 				22A120AA283FE1BD002EA23F /* cells */,
 				22A120A5283FE05D002EA23F /* models */,
-				22A1208D283FA8F3002EA23F /* AppDelegate.swift */,
-				22A1208F283FA8F3002EA23F /* SceneDelegate.swift */,
-				22A12093283FA8F3002EA23F /* Main.storyboard */,
 				22A12096283FA8F4002EA23F /* Assets.xcassets */,
-				22A12098283FA8F4002EA23F /* LaunchScreen.storyboard */,
 				22A1209B283FA8F4002EA23F /* Info.plist */,
 			);
 			path = unsplash;
@@ -78,8 +99,9 @@
 			children = (
 				22A120A6283FE0AF002EA23F /* api_response.swift */,
 			);
-			path = models;
-			sourceTree = "<group>";
+			name = models;
+			path = unsplash/models;
+			sourceTree = SOURCE_ROOT;
 		};
 		22A120AA283FE1BD002EA23F /* cells */ = {
 			isa = PBXGroup;
@@ -95,6 +117,33 @@
 				22A12091283FA8F3002EA23F /* ViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		22C1D2912840116600178E1B /* storyboads */ = {
+			isa = PBXGroup;
+			children = (
+				22A12098283FA8F4002EA23F /* LaunchScreen.storyboard */,
+				22A12093283FA8F3002EA23F /* Main.storyboard */,
+			);
+			path = storyboads;
+			sourceTree = "<group>";
+		};
+		22C1D2982840128500178E1B /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				22A1208D283FA8F3002EA23F /* AppDelegate.swift */,
+				22A1208F283FA8F3002EA23F /* SceneDelegate.swift */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		22C1D2A9284025C600178E1B /* unsplashUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22C1D2AA284025C600178E1B /* unsplashUITests.swift */,
+				22C1D2AC284025C600178E1B /* Info.plist */,
+			);
+			path = unsplashUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +166,24 @@
 			productReference = 22A1208A283FA8F3002EA23F /* unsplash.app */;
 			productType = "com.apple.product-type.application";
 		};
+		22C1D2A7284025C600178E1B /* unsplashUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C1D2B1284025C600178E1B /* Build configuration list for PBXNativeTarget "unsplashUITests" */;
+			buildPhases = (
+				22C1D2A4284025C600178E1B /* Sources */,
+				22C1D2A5284025C600178E1B /* Frameworks */,
+				22C1D2A6284025C600178E1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22C1D2AE284025C600178E1B /* PBXTargetDependency */,
+			);
+			name = unsplashUITests;
+			productName = unsplashUITests;
+			productReference = 22C1D2A8284025C600178E1B /* unsplashUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -128,6 +195,10 @@
 				TargetAttributes = {
 					22A12089283FA8F3002EA23F = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					22C1D2A7284025C600178E1B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 22A12089283FA8F3002EA23F;
 					};
 				};
 			};
@@ -145,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				22A12089283FA8F3002EA23F /* unsplash */,
+				22C1D2A7284025C600178E1B /* unsplashUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +229,13 @@
 				22A1209A283FA8F4002EA23F /* LaunchScreen.storyboard in Resources */,
 				22A12097283FA8F4002EA23F /* Assets.xcassets in Resources */,
 				22A12095283FA8F3002EA23F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C1D2A6284025C600178E1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +254,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22C1D2A4284025C600178E1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C1D2AB284025C600178E1B /* unsplashUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22C1D2AE284025C600178E1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22A12089283FA8F3002EA23F /* unsplash */;
+			targetProxy = 22C1D2AD284025C600178E1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		22A12093283FA8F3002EA23F /* Main.storyboard */ = {
@@ -349,6 +444,42 @@
 			};
 			name = Release;
 		};
+		22C1D2AF284025C600178E1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = unsplashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.unsplash.unsplashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = unsplash;
+			};
+			name = Debug;
+		};
+		22C1D2B0284025C600178E1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = unsplashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.unsplash.unsplashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = unsplash;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -366,6 +497,15 @@
 			buildConfigurations = (
 				22A1209F283FA8F4002EA23F /* Debug */,
 				22A120A0283FA8F4002EA23F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C1D2B1284025C600178E1B /* Build configuration list for PBXNativeTarget "unsplashUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C1D2AF284025C600178E1B /* Debug */,
+				22C1D2B0284025C600178E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
